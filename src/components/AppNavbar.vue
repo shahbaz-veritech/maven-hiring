@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="shadow-md p-5 px-16 flex flex-col md:flex-row justify-between items-center bg-primary"
+    class="shadow-md p-5 px-16 flex flex-col md:flex-row justify-between items-center bg-primary border-b border-gray-300"
   >
     <div class="flex items-center">
       <img

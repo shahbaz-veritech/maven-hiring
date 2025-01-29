@@ -5,11 +5,13 @@
     <footer class="footer text-white py-8 md:px-28 px-8">
       <div class="w-full flex flex-col md:flex-row gap-6">
         <div class="w-full md:w-4/12">
-          <img
-            src="@/assets/logo-2.png"
-            alt="maven-hiring-logo"
-            class="w-32 mb-3 rounded-xl"
-          />
+          <div class="logo mr-8 py-1 flex justify-center rounded-lg mb-3">
+            <img
+              src="@/assets/logo-2.png"
+              alt="maven-hiring-logo"
+              class="w-32 rounded-xl"
+            />
+          </div>
           <p class="text-lg">
             Transforming Minds,<br />
             Transforming Businesses
@@ -124,6 +126,9 @@
 <style scoped>
 .footer {
   background-color: #333333;
+}
+.logo {
+  background: #96947b;
 }
 </style>
 
