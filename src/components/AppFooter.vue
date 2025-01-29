@@ -5,7 +5,7 @@
     <footer class="footer text-white py-8 md:px-28 px-8">
       <div class="w-full flex flex-col md:flex-row gap-6">
         <div class="w-full md:w-4/12">
-          <div class="logo mr-8 py-1 flex justify-center rounded-lg mb-3">
+          <div class="logo mr-8 w-40 py-1 flex justify-center rounded-lg mb-3">
             <img
               src="@/assets/logo-2.png"
               alt="maven-hiring-logo"

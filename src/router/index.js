@@ -17,11 +17,19 @@ const routes = [
     name: "contact",
     component: () => import("../views/ContactUsView.vue"),
   },
+  {
+    path: "/:catchAll(.*)",
+    name: "404-page-not-found",
+    component: () => import("../views/Error404Page.vue"),
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior() {
+    return { top: 0, behavior: "smooth" };
+  },
 });
 
 export default router;
