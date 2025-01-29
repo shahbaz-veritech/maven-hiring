@@ -1,25 +1,25 @@
 <template>
-  <div
-    class="container mx-auto p-20 custom-gradient flex flex-col items-center"
-  >
-    <h1 class="text-3xl md:text-5xl">Our Industries</h1>
-    <p class="mt-4 text-lg">
-      We serve a diverse range of industries, including:
+  <div class="mx-auto p-28 custom-gradient flex flex-col items-center">
+    <h1 class="text-3xl md:text-5xl">What markets do we recruit for?</h1>
+    <p class="mt-4 text-lg text-center">
+      With our expertise and exclusive network, we can successfully recruit in
+      All Markets
     </p>
     <div
-      class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6"
+      class="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 gap-5"
     >
       <div
         v-for="(item, index) in industries"
         :key="index"
-        class="flex flex-col items-center mt-10 gap-4"
+        class="flex flex-col items-center mt-10"
       >
         <img :src="item.image" class="filter grayscale w-20" alt="logo" />
-        <p class="font-bold">{{ item.title }}</p>
+        <p class="font-extrabold">{{ item.title }}</p>
       </div>
     </div>
   </div>
 </template>
+
 <style scoped>
 .custom-gradient {
   background: linear-gradient(
@@ -27,8 +27,6 @@
     rgb(143, 154, 194) 0%,
     rgb(249, 249, 249) 100%
   );
-  margin-top: 0;
-  margin-bottom: 0;
 }
 </style>
 <script>

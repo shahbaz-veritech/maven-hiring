@@ -1,10 +1,10 @@
 <template>
-  <div class="container mx-auto p-20">
+  <div class="container mx-auto p-24">
     <div class="text-center mb-10">
       <h1 class="text-3xl md:text-5xl">Our Expertise</h1>
       <p class="mt-4 text-lg text-gray-600">
-        With extensive experience in recruitment, staffing, and HR consulting,
-        our team excels in
+        With extensive experience in recruitment, staffing and business
+        consulting, our team excels in
       </p>
     </div>
 

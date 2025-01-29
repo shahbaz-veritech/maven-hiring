@@ -1,6 +1,7 @@
 <template>
   <AppNavbar />
   <router-view />
+  <AppFooter />
 </template>
 
 <style>
@@ -12,11 +13,13 @@
 </style>
 <script>
 import AppNavbar from "@/components/AppNavbar";
+import AppFooter from "@/components/AppFooter";
 
 export default {
   name: "HomeView",
   components: {
     AppNavbar,
+    AppFooter,
   },
 };
 </script>

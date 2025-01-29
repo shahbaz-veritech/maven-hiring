@@ -1,0 +1,138 @@
+<template>
+  <div class="bg-primary pt-8">
+    <img src="@/assets/svgs/footer.svg" alt="SVG Image" class="w-screen" />
+
+    <footer class="footer text-white py-8 md:px-28 px-8">
+      <div class="w-full flex flex-col md:flex-row gap-6">
+        <div class="w-full md:w-4/12">
+          <img
+            src="@/assets/logo-2.png"
+            alt="maven-hiring-logo"
+            class="w-32 mb-3 rounded-xl"
+          />
+          <p class="text-lg">
+            Transforming Minds,<br />
+            Transforming Businesses
+          </p>
+          <div class="flex space-x-4 mt-3">
+            <a
+              href="https://www.linkedin.com/company/mavenhiring/"
+              target="_blank"
+            >
+              <img src="@/assets/svgs/linkedin.svg" alt="linkedin icon" />
+            </a>
+            <a href="https://www.x.com/" target="_blank">
+              <img src="@/assets/svgs/X.svg" alt="x icon" />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+              <img src="@/assets/svgs/facebook.svg" alt="facebook icon" />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="@/assets/svgs/instagram.svg" alt="instagram-icon" />
+            </a>
+          </div>
+        </div>
+        <div class="w-full md:w-8/12 flex flex-wrap gap-8 justify-between">
+          <div>
+            <h3 class="font-bold text-lg">About</h3>
+            <ul class="mt-2 space-y-2 leading-8">
+              <li>
+                <router-link to="/team" class="text-gray-300 hover:underline"
+                  >Team</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/history" class="text-gray-300 hover:underline"
+                  >History</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/careers" class="text-gray-300 hover:underline"
+                  >Careers</router-link
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg">Privacy</h3>
+            <ul class="mt-2 space-y-2 leading-8">
+              <li>
+                <router-link to="/about" class="text-gray-300 hover:underline"
+                  >About us</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/contact" class="text-gray-300 hover:underline"
+                  >Contact us</router-link
+                >
+              </li>
+              <li>
+                <router-link
+                  to="/disclaimer"
+                  class="text-gray-300 hover:underline"
+                  >Disclaimer</router-link
+                >
+              </li>
+              <li>
+                <router-link
+                  to="/privacy-policy"
+                  class="text-gray-300 hover:underline"
+                  >Privacy Policy</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/terms" class="text-gray-300 hover:underline"
+                  >Terms and Conditions</router-link
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg">Get in Touch</h3>
+            <p class="mt-2">
+              <strong>Office:</strong><br />
+              Maven Hiring,<br />
+              Santa Clara, California, United States
+            </p>
+            <p class="mt-2">
+              Email:
+              <a
+                href="mailto:meena@mavenhiring.com"
+                class="text-blue-400 hover:underline"
+              >
+                meena@mavenhiring.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-20 mb-3">
+        <p class="text-sm">
+          &copy; Maven Hiring, {{ year }}. All Rights Reserved. Developed by
+          <a href="https://veritech.ai" class="text-blue-400 hover:underline"
+            >Veritech.ai</a
+          >
+        </p>
+      </div>
+    </footer>
+  </div>
+</template>
+
+<style scoped>
+.footer {
+  background-color: #333333;
+}
+</style>
+
+<script>
+export default {
+  data() {
+    return {
+      year: new Date().getFullYear(),
+    };
+  },
+};
+</script>

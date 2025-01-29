@@ -4,9 +4,9 @@
   >
     <div class="flex items-center">
       <img
-        src="@/assets/propelmindz-logo.png"
-        alt="PropelMindz Logo"
-        class="h-20"
+        src="@/assets/logo.jpg"
+        alt="Maven-hiring Logo"
+        class="h-20 rounded"
       />
     </div>
 

@@ -1,4 +1,4 @@
-# propelmindz
+# Maven Hiring
 
 ## Project setup
 
