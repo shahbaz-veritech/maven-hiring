@@ -5,8 +5,9 @@
     <div class="flex items-center">
       <img
         src="@/assets/logo-2.png"
+        @click="$router.push('/')"
         alt="maven-hiring-logo"
-        class="w-32 rounded-xl"
+        class="w-32 rounded-xl cursor-pointer"
       />
     </div>
 
@@ -33,6 +34,7 @@
       <div
         v-if="isMenuOpen"
         class="z-50 absolute top-24 left-0 w-full bg-primary shadow-md md:hidden"
+        ref="menu"
       >
         <router-link
           to="/"
@@ -71,6 +73,21 @@ export default {
     closeMenu() {
       this.isMenuOpen = false;
     },
+    handleClickOutside(event) {
+      if (
+        this.isMenuOpen &&
+        !this.$refs.menu.contains(event.target) &&
+        !event.target.closest("button")
+      ) {
+        this.closeMenu();
+      }
+    },
+  },
+  mounted() {
+    document.addEventListener("click", this.handleClickOutside);
+  },
+  beforeUnmount() {
+    document.removeEventListener("click", this.handleClickOutside);
   },
 };
 </script>

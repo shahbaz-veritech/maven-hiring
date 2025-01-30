@@ -181,16 +181,15 @@ export default {
           .required("Email is required"),
         phone: yup
           .string()
-          .required("Phone number is required")
+          .min(10, "Phone number must be exactly 10 digits")
           .matches(/^\d+$/, "Phone number should contain only numbers")
-          .length(10, "Phone number must be exactly 10 digits"),
+          .required("Phone number is required"),
         message: yup.string().required("Message cannot be empty"),
       });
 
       try {
         await schema.validate(this.form, { abortEarly: false });
         console.log("Form Submitted", this.form);
-
         this.form = { name: "", email: "", phone: "", message: "" };
         this.errors = {};
       } catch (err) {
