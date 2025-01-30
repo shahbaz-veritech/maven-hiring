@@ -16,7 +16,9 @@
         class="flex flex-col items-center mb-2 hover:shadow-lg rounded-md"
       >
         <img :src="item.image" class="filter grayscale w-20" alt="logo" />
-        <p class="text-center text-gray-800 font-semibold leading-5 text-base mt-2">
+        <p
+          class="text-center text-gray-800 font-semibold leading-5 text-base mt-2"
+        >
           {{ item.title }}
         </p>
       </div>
