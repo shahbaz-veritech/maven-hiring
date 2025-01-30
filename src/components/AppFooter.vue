@@ -24,17 +24,38 @@
             <a
               href="https://www.linkedin.com/company/mavenhiring/"
               target="_blank"
+              class="h-7 w-7"
             >
-              <img src="@/assets/svgs/linkedin.svg" alt="linkedin icon" />
+              <img
+                src="@/assets/svgs/linkedin.svg"
+                alt="linkedin icon"
+                class="hover-animate h-6"
+              />
             </a>
-            <a href="https://www.x.com/" target="_blank">
-              <img src="@/assets/svgs/X.svg" alt="x icon" />
+            <a href="https://www.x.com/" target="_blank" class="h-7 w-7">
+              <img
+                src="@/assets/svgs/X.svg"
+                alt="x icon"
+                class="hover-animate h-6"
+              />
             </a>
-            <a href="https://www.facebook.com/" target="_blank">
-              <img src="@/assets/svgs/facebook.svg" alt="facebook icon" />
+            <a href="https://www.facebook.com/" target="_blank" class="h-7 w-7">
+              <img
+                src="@/assets/svgs/facebook.svg"
+                alt="facebook icon"
+                class="hover-animate h-6"
+              />
             </a>
-            <a href="https://www.instagram.com/" target="_blank">
-              <img src="@/assets/svgs/instagram.svg" alt="instagram-icon" />
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="h-7 w-7"
+            >
+              <img
+                src="@/assets/svgs/instagram.svg"
+                alt="instagram-icon"
+                class="hover-animate h-6"
+              />
             </a>
           </div>
         </div>
@@ -133,6 +154,13 @@
 }
 .logo {
   background: #96947b;
+}
+.hover-animate {
+  transition: transform 0.1s ease-in-out, height 0.1s ease-in-out;
+}
+.hover-animate:hover {
+  transform: scale(1.1);
+  height: 26px;
 }
 </style>
 

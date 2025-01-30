@@ -79,54 +79,73 @@
             </p>
           </div>
           <div class="flex space-x-4 mt-3">
-            <a
-              href="https://www.linkedin.com/company/mavenhiring/"
-              target="_blank"
-              class="bg-blue-800 rounded-full p-1"
-            >
-              <img
-                src="@/assets/svgs/linkedin.svg"
-                alt="linkedin icon"
-                class="w-7"
-              />
-            </a>
-            <a
-              href="https://www.x.com/"
-              target="_blank"
-              class="bg-black rounded-full p-1 hover:p-2"
-            >
-              <img src="@/assets/svgs/X.svg" alt="x icon" class="w-7" />
-            </a>
-
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              class="bg-blue-800 rounded-full p-1"
-            >
-              <img
-                src="@/assets/svgs/facebook.svg"
-                alt="facebook icon"
-                class="w-7"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              class="bg-pink-600 rounded-full p-1"
-            >
-              <img
-                src="@/assets/svgs/instagram.svg"
-                alt="instagram-icon"
-                class="w-7"
-              />
-            </a>
+            <div class="h-10 w-10 flex justify-center items-center">
+              <a
+                href="https://www.linkedin.com/company/mavenhiring/"
+                target="_blank"
+                class="bg-blue-800 rounded-full flex justify-center items-center p-1"
+              >
+                <img
+                  src="@/assets/svgs/linkedin.svg"
+                  alt="linkedin icon"
+                  class="hover-animate h-6"
+                />
+              </a>
+            </div>
+            <div class="h-10 w-10 flex justify-center items-center">
+              <a
+                href="https://www.x.com/"
+                target="_blank"
+                class="bg-black rounded-full flex justify-center items-center p-1"
+              >
+                <img
+                  src="@/assets/svgs/X.svg"
+                  alt="x icon"
+                  class="hover-animate h-6"
+                />
+              </a>
+            </div>
+            <div class="h-10 w-10 flex justify-center items-center">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="bg-blue-800 rounded-full flex justify-center items-center p-1"
+              >
+                <img
+                  src="@/assets/svgs/facebook.svg"
+                  alt="facebook icon"
+                  class="hover-animate h-6"
+                />
+              </a>
+            </div>
+            <div class="h-10 w-10 flex justify-center items-center">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="bg-pink-600 rounded-full flex justify-center items-center p-1"
+              >
+                <img
+                  src="@/assets/svgs/instagram.svg"
+                  alt="instagram-icon"
+                  class="hover-animate h-6"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-
+<style scoped>
+.hover-animate {
+  transition: transform 0.2s ease-in-out, height 0.1s ease-in-out;
+}
+.hover-animate:hover {
+  transform: scale(1.1);
+  height: 28px;
+}
+</style>
 <script>
 export default {
   data() {
