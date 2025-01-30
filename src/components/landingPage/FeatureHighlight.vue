@@ -27,15 +27,21 @@
     class="custom-box p-4 flex items-center gap-4 justify-around flex-col md:flex-row bg-primary"
   >
     <h2 class="text-white text-xl lg:text-3xl">Stay in Touch</h2>
-    <form class="flex" @submit.prevent="subscribe">
-      <input
-        type="email"
-        required
-        v-model="email"
-        placeholder="Enter Your Email"
-        class="px-4 py-2 w-60 md:w-80 border border-gray-300 focus:outline-none"
-      />
-      <button class="bg-black text-white px-4 py-3 hover:bg-gray-800">
+    <form class="flex flex-col md:flex-row" @submit.prevent="subscribe">
+      <div class="flex flex-col h-12">
+        <input
+          type="text"
+          v-model="email"
+          placeholder="Enter Your Email"
+          class="px-4 py-2 w-60 md:w-80 border border-gray-300 focus:outline-none"
+        />
+        <p v-if="error" class="text-red-500 text-sm">
+          {{ error }}
+        </p>
+      </div>
+      <button
+        class="bg-black text-white px-4 py-2 hover:bg-gray-800 mt-4 md:mt-0 md:ml-4 h-10"
+      >
         Subscribe
       </button>
     </form>
@@ -53,10 +59,13 @@
 </style>
 
 <script>
+import * as yup from "yup";
+
 export default {
   data() {
     return {
       email: "",
+      error: "",
       features: [
         {
           title: "Zero Cost Upfront",
@@ -87,9 +96,22 @@ export default {
     };
   },
   methods: {
-    subscribe() {
-      console.log(this.email);
-      this.email = "";
+    async subscribe() {
+      const schema = yup.object().shape({
+        email: yup
+          .string()
+          .email("Invalid email format")
+          .required("Email is required"),
+      });
+
+      try {
+        await schema.validate({ email: this.email });
+        alert("Jobs alerts are added.");
+        this.email = "";
+        this.error = "";
+      } catch (err) {
+        this.error = err.message;
+      }
     },
   },
 };
