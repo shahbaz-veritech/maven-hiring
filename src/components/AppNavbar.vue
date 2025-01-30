@@ -53,7 +53,7 @@
     <transition name="slide-fade">
       <div
         v-if="isMenuOpen"
-        class="z-50 absolute top-24 left-0 w-full bg-primary shadow-md md:hidden"
+        class="z-50 absolute top-16 left-0 w-full bg-primary shadow-md md:hidden"
         ref="menu"
       >
         <router-link
