@@ -190,6 +190,7 @@ export default {
       try {
         await schema.validate(this.form, { abortEarly: false });
         console.log("Form Submitted", this.form);
+        alert(`Hi ${this.form.name}, we’ll connect with you shortly...`);
         this.form = { name: "", email: "", phone: "", message: "" };
         this.errors = {};
       } catch (err) {
