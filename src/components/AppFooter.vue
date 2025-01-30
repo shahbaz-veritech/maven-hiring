@@ -64,17 +64,23 @@
             <h3 class="font-bold text-lg">About</h3>
             <ul class="mt-2 space-y-2 leading-8">
               <li>
-                <router-link to="/team" class="text-gray-300 hover:underline"
+                <router-link
+                  to="/team"
+                  class="text-gray-300 hover:underline hover:text-white font-semibold"
                   >Team</router-link
                 >
               </li>
               <li>
-                <router-link to="/history" class="text-gray-300 hover:underline"
+                <router-link
+                  to="/history"
+                  class="text-gray-300 hover:underline hover:text-white font-semibold"
                   >History</router-link
                 >
               </li>
               <li>
-                <router-link to="/careers" class="text-gray-300 hover:underline"
+                <router-link
+                  to="/careers"
+                  class="text-gray-300 hover:underline hover:text-white font-semibold"
                   >Careers</router-link
                 >
               </li>
@@ -85,31 +91,37 @@
             <h3 class="font-bold text-lg">Privacy</h3>
             <ul class="mt-2 space-y-2 leading-8">
               <li>
-                <router-link to="/about" class="text-gray-300 hover:underline"
+                <router-link
+                  to="/about"
+                  class="text-gray-300 hover:underline hover:text-white font-semibold"
                   >About us</router-link
                 >
               </li>
               <li>
-                <router-link to="/contact" class="text-gray-300 hover:underline"
+                <router-link
+                  to="/contact"
+                  class="text-gray-300 hover:underline hover:text-white font-semibold"
                   >Contact us</router-link
                 >
               </li>
               <li>
                 <router-link
                   to="/disclaimer"
-                  class="text-gray-300 hover:underline"
+                  class="text-gray-300 hover:underline hover:text-white font-semibold"
                   >Disclaimer</router-link
                 >
               </li>
               <li>
                 <router-link
                   to="/privacy-policy"
-                  class="text-gray-300 hover:underline"
+                  class="text-gray-300 hover:underline hover:text-white font-semibold"
                   >Privacy Policy</router-link
                 >
               </li>
               <li>
-                <router-link to="/terms" class="text-gray-300 hover:underline"
+                <router-link
+                  to="/terms"
+                  class="text-gray-300 hover:underline hover:text-white font-semibold"
                   >Terms and Conditions</router-link
                 >
               </li>
@@ -137,9 +149,11 @@
       </div>
 
       <div class="text-center mt-20 pt-4 border-t">
-        <p class="text-sm">
+        <p class="text-white text-center">
           &copy; Maven Hiring, {{ year }}. All Rights Reserved. Developed by
-          <a href="https://veritech.ai" class="text-blue-400 hover:underline"
+          <a
+            href="https://veritech.ai"
+            class="text-blue-400 hover:underline font-semibold"
             >Veritech.ai</a
           >
         </p>

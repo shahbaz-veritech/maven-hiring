@@ -1,6 +1,6 @@
 <template>
-  <div class="mx-auto p-8 md:p-24 custom-gradient flex flex-col items-center">
-    <h1 class="text-3xl md:text-5xl text-center">
+  <div class="mx-auto p-12 custom-gradient flex flex-col items-center">
+    <h1 class="text-2xl lg:text-4xl font-bold text-center">
       What markets do we recruit for?
     </h1>
     <p class="my-4 text-lg text-center">
@@ -13,7 +13,7 @@
       <div
         v-for="(item, index) in industries"
         :key="index"
-        class="flex flex-col items-center mb-2"
+        class="flex flex-col items-center mb-2 hover:shadow-lg rounded-md"
       >
         <img :src="item.image" class="filter grayscale w-20" alt="logo" />
         <p class="font-extrabold">{{ item.title }}</p>

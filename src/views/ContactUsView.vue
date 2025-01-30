@@ -1,71 +1,10 @@
 <template>
   <div class="flex justify-center items-center py-8 md:py-16 bg-primary">
     <div class="md:w-3/5">
-      <p class="text-3xl md:text-5xl font-normal text-center mb-5">
-        Contact us
-      </p>
       <div class="flex flex-col md:flex-row justify-between gap-8">
         <div class="flex-1">
-          <form @submit.prevent="handleSubmit">
-            <div class="my-2">
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                v-model="form.name"
-                class="border p-2 rounded-lg w-80 border-gray-400"
-              />
-              <p v-if="errors.name" class="text-red-500 text-sm">
-                {{ errors.name }}
-              </p>
-            </div>
-            <div class="my-2">
-              <input
-                type="text"
-                name="email"
-                placeholder="Email"
-                v-model="form.email"
-                class="border p-2 rounded-lg w-80 border-gray-400"
-              />
-              <p v-if="errors.email" class="text-red-500 text-sm">
-                {{ errors.email }}
-              </p>
-            </div>
-            <div class="my-2">
-              <input
-                type="text"
-                name="phone"
-                placeholder="Phone"
-                v-model="form.phone"
-                class="border p-2 rounded-lg w-80 border-gray-400"
-              />
-              <p v-if="errors.phone" class="text-red-500 text-sm">
-                {{ errors.phone }}
-              </p>
-            </div>
-            <div class="my-2">
-              <textarea
-                name="message"
-                placeholder="Message"
-                v-model="form.message"
-                class="border p-2 rounded-lg w-80 border-gray-400"
-                rows="6"
-              />
-              <p v-if="errors.message" class="text-red-500 text-sm">
-                {{ errors.message }}
-              </p>
-            </div>
-            <button
-              type="submit"
-              class="border border-blue-500 hover:border-blue-700 text-blue-500 hover:text-blue-700 py-2 px-6 mt-4 rounded-lg"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-        <div class="flex-1">
-          <div>
-            <h1 class="text-4xl">Get in Touch</h1>
+          <div class="text-gray-600 text-center lg:text-left max-w-lg mx-auto">
+            <h1 class="text-4xl font-bold">Get in Touch</h1>
             <p class="mt-4">
               <span class="font-extrabold">Office:</span><br />
               Maven Hiring,<br />
@@ -73,7 +12,7 @@
               United States
             </p>
             <p class="my-4">
-              Email:
+              <span class="font-semibold"> Email:</span>
               <a
                 href="mailto:meena@mavenhiring.com"
                 class="text-blue-400 hover:underline"
@@ -82,13 +21,13 @@
               </a>
             </p>
             <p class="my-4">
-              Phone:
+              <span class="font-semibold"> Phone:</span>
               <a href="tel:+14084644327" class="text-blue-400 hover:underline">
                 +14084644327
               </a>
             </p>
           </div>
-          <div class="flex space-x-4 mt-3">
+          <div class="flex space-x-4 mt-3 justify-center lg:justify-start">
             <div class="h-10 w-10 flex justify-center items-center">
               <a
                 href="https://www.linkedin.com/company/mavenhiring/"
@@ -142,6 +81,64 @@
               </a>
             </div>
           </div>
+        </div>
+        <div class="flex-1">
+          <form @submit.prevent="handleSubmit">
+            <div class="my-2">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                v-model="form.name"
+                class="border p-2 rounded-lg w-80 border-gray-400"
+              />
+              <p v-if="errors.name" class="text-red-500 text-sm">
+                {{ errors.name }}
+              </p>
+            </div>
+            <div class="my-2">
+              <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                v-model="form.email"
+                class="border p-2 rounded-lg w-80 border-gray-400"
+              />
+              <p v-if="errors.email" class="text-red-500 text-sm">
+                {{ errors.email }}
+              </p>
+            </div>
+            <div class="my-2">
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone"
+                v-model="form.phone"
+                class="border p-2 rounded-lg w-80 border-gray-400"
+              />
+              <p v-if="errors.phone" class="text-red-500 text-sm">
+                {{ errors.phone }}
+              </p>
+            </div>
+            <div class="my-2">
+              <textarea
+                name="message"
+                placeholder="Message"
+                v-model="form.message"
+                class="border p-2 rounded-lg w-80 border-gray-400"
+                rows="6"
+              />
+              <p v-if="errors.message" class="text-red-500 text-sm">
+                {{ errors.message }}
+              </p>
+            </div>
+            <button
+              type="submit"
+              class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </div>

@@ -11,7 +11,9 @@
     <div
       class="relative z-10 flex flex-col items-center justify-center h-1/2 text-center text-white px-6 bg-opacity-5 home-text"
     >
-      <h1 class="text-xl md:text-3xl lg:text-5xl">Welcome to Maven Hiring</h1>
+      <h1 class="text-3xl lg:text-5xl font-bold mb-4">
+        Welcome to Maven Hiring
+      </h1>
       <p class="mt-4 text-sm md:text-xl max-w-5xl px-5 lg:px-20">
         Maven Hiring LLC is a boutique HR recruitment firm founded by
         experienced recruitment industry professionals, dedicated to empowering

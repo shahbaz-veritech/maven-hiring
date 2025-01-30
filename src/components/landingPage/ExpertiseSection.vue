@@ -1,7 +1,7 @@
 <template>
-  <div class="mx-auto p-12 md:p-24">
+  <div class="mx-auto p-12">
     <div class="text-center mb-10">
-      <h1 class="text-3xl md:text-5xl">Our Expertise</h1>
+      <h1 class="text-2xl lg:text-4xl font-bold text-center">Our Expertise</h1>
       <p class="mt-4 text-lg text-gray-600">
         With extensive experience in recruitment, staffing and business
         consulting, our team excels in
@@ -14,7 +14,7 @@
       <div
         v-for="item in expertise"
         :key="item.id"
-        class="flex flex-col items-center text-center p-6"
+        class="flex flex-col items-center text-center p-6 hover:shadow-lg rounded-lg"
       >
         <img :src="item.image" alt="icon" class="w-16 h-16 mb-4" />
         <h2 class="text-xl font-semibold">{{ item.title }}</h2>

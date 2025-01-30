@@ -1,7 +1,7 @@
 <template>
-  <div class="mx-auto p-8 md:p-24 bg-primary">
+  <div class="mx-auto p-12 bg-primary">
     <div class="flex items-center flex-col">
-      <h1 class="text-3xl md:text-5xl">Our Mission</h1>
+      <h1 class="text-2xl lg:text-4xl font-bold text-center">Our Mission</h1>
       <p class="mt-4 text-lg text-gray-600 text-center md:w-3/4">
         Our mission is to provide personalized, high-quality recruitment
         services that prioritize client satisfaction, candidate experience, and

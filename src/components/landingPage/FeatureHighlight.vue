@@ -6,7 +6,7 @@
       <img src="@/assets/work-image-1.jpeg" class="rounded-3xl" />
     </div>
     <div class="w-full lg:w-1/2 lg:pl-32">
-      <h1 class="text-xl lg:text-3xl mb-5">Why Work with us?</h1>
+      <h1 class="text-2xl lg:text-4xl font-bold mb-5">Why Work with us?</h1>
       <ul>
         <li
           class="list-disc ml-5"
@@ -26,21 +26,21 @@
   <div
     class="custom-box p-4 flex items-center gap-4 justify-around flex-col md:flex-row bg-primary"
   >
-    <h2 class="text-white text-xl lg:text-3xl">Stay in Touch</h2>
+    <h2 class="text-white text-xl font-bold lg:text-4xl">Stay in Touch</h2>
     <form class="flex flex-col md:flex-row" @submit.prevent="subscribe">
       <div class="flex flex-col h-12">
         <input
           type="text"
           v-model="email"
           placeholder="Enter Your Email"
-          class="px-4 py-2 w-60 md:w-80 border border-gray-300 focus:outline-none"
+          class="px-4 py-2 w-60 md:w-80 border border-gray-300 focus:outline-none h-9"
         />
         <p v-if="error" class="text-red-500 text-sm">
           {{ error }}
         </p>
       </div>
       <button
-        class="bg-black text-white px-4 py-2 hover:bg-gray-800 mt-4 md:mt-0 md:ml-4 h-10"
+        class="bg-black text-white px-4 py-2 hover:bg-gray-800 mt-4 md:mt-0 h-9"
       >
         Subscribe
       </button>

@@ -1,24 +1,39 @@
 <template>
   <nav
-    class="sticky top-0 shadow-md p-5 md:px-16 flex justify-between items-center bg-primary border-b border-gray-300 z-50"
+    class="sticky top-0 p-2 md:px-16 flex justify-between items-center bg-primary z-50 shadow-md"
   >
     <div class="flex items-center">
       <img
         src="@/assets/logo-2.png"
         @click="$router.push('/')"
         alt="maven-hiring-logo"
-        class="w-32 rounded-xl cursor-pointer"
+        class="w-24 h-12 rounded-xl cursor-pointer"
       />
     </div>
 
     <div class="space-x-8 text-lg hidden md:flex">
-      <router-link to="/" class="text-gray-700 hover:text-blue-500"
+      <router-link
+        to="/"
+        :class="[
+          'text-gray-700 hover:text-blue-500 font-semibold',
+          isActive('/'),
+        ]"
         >Home</router-link
       >
-      <router-link to="/about" class="text-gray-700 hover:text-blue-500"
+      <router-link
+        to="/about"
+        :class="[
+          'text-gray-700 hover:text-blue-500 font-semibold',
+          isActive('/about'),
+        ]"
         >About us</router-link
       >
-      <router-link to="/contact" class="text-gray-700 hover:text-blue-500"
+      <router-link
+        to="/contact"
+        :class="[
+          'text-gray-700 hover:text-blue-500 font-semibold',
+          isActive('/contact'),
+        ]"
         >Contact us</router-link
       >
     </div>
@@ -43,19 +58,19 @@
       >
         <router-link
           to="/"
-          class="block px-4 py-2 text-blue-500 hover:bg-gray-200"
+          :class="['block px-4 py-2 hover:bg-gray-200', isActive('/')]"
           @click="closeMenu"
           >Home</router-link
         >
         <router-link
           to="/about"
-          class="block px-4 py-2 text-blue-500 hover:bg-gray-200"
+          :class="['block px-4 py-2 hover:bg-gray-200', isActive('/about')]"
           @click="closeMenu"
           >About us</router-link
         >
         <router-link
           to="/contact"
-          class="block px-4 py-2 text-blue-500 hover:bg-gray-200"
+          :class="['block px-4 py-2 hover:bg-gray-200', isActive('/contact')]"
           @click="closeMenu"
           >Contact us</router-link
         >
@@ -86,6 +101,9 @@ export default {
       ) {
         this.closeMenu();
       }
+    },
+    isActive(route) {
+      return this.$route.path === route ? "text-blue-500 underline" : "";
     },
   },
   mounted() {
