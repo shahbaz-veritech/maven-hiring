@@ -22,10 +22,15 @@
         >Contact us</router-link
       >
     </div>
+
     <button @click="toggleMenu" class="md:hidden focus:outline-none">
       <img
-        src="@/assets/svgs/hamburgerIcon.svg"
-        alt="hamburgerIcon"
+        :src="
+          isMenuOpen
+            ? require('@/assets/svgs/crossIcon.svg')
+            : require('@/assets/svgs/hamburgerIcon.svg')
+        "
+        alt="toggleIcon"
         class="h-6"
       />
     </button>
