@@ -3,7 +3,7 @@
     <h1 class="text-2xl lg:text-4xl font-bold text-center">
       What markets do we recruit for?
     </h1>
-    <p class="my-4 text-lg text-center">
+    <p class="my-4 mb-6 text-lg text-gray-600 text-center">
       With our expertise and exclusive network, we can successfully recruit in
       All Markets
     </p>
@@ -16,7 +16,9 @@
         class="flex flex-col items-center mb-2 hover:shadow-lg rounded-md"
       >
         <img :src="item.image" class="filter grayscale w-20" alt="logo" />
-        <p class="font-extrabold">{{ item.title }}</p>
+        <p class="text-center text-gray-800 font-semibold leading-5 text-base mt-2">
+          {{ item.title }}
+        </p>
       </div>
     </div>
   </div>

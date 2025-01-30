@@ -9,12 +9,12 @@
     </div>
 
     <div
-      class="relative z-10 flex flex-col items-center justify-center h-1/2 text-center text-white px-6 bg-opacity-5 home-text"
+      class="relative z-10 flex flex-col items-center justify-center h-3/5 md:h-1/2 text-center text-white px-6 bg-opacity-5 home-text"
     >
-      <h1 class="text-3xl lg:text-5xl font-bold mb-4">
+      <h1 class="text-2xl lg:text-5xl font-bold mb-4">
         Welcome to Maven Hiring
       </h1>
-      <p class="mt-4 text-sm md:text-xl max-w-5xl px-5 lg:px-20">
+      <p class="text-white text-center max-w-5xl mx-auto">
         Maven Hiring LLC is a boutique HR recruitment firm founded by
         experienced recruitment industry professionals, dedicated to empowering
         talent and businesses. Our team of experts has decades of combined

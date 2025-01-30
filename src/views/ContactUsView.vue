@@ -1,33 +1,35 @@
 <template>
-  <div class="flex justify-center items-center py-8 md:py-16 bg-primary">
+  <div class="flex justify-center items-center p-8 md:py-16 bg-primary">
     <div class="md:w-3/5">
       <div class="flex flex-col md:flex-row justify-between gap-8">
         <div class="flex-1">
-          <div class="text-gray-600 text-center lg:text-left max-w-lg mx-auto">
+          <div class="text-gray-600 text-left max-w-lg mx-auto">
             <h1 class="text-4xl font-bold">Get in Touch</h1>
-            <p class="mt-4">
-              <span class="font-extrabold">Office:</span><br />
-              Maven Hiring,<br />
-              Santa Clara, California,<br />
-              United States
-            </p>
-            <p class="my-4">
-              <span class="font-semibold"> Email:</span>
+            <div class="mt-4 flex gap-4 items-start">
+              <img src="@/assets/svgs/address.svg" class="w-5" alt="address" />
+              <p>
+                Maven Hiring,<br />
+                Santa Clara, California,<br />
+                United States
+              </p>
+            </div>
+            <div class="my-4 flex gap-4 items-start">
+              <img src="@/assets/svgs/email.svg" class="w-5" alt="email" />
               <a
                 href="mailto:meena@mavenhiring.com"
                 class="text-blue-400 hover:underline"
               >
                 meena@mavenhiring.com
               </a>
-            </p>
-            <p class="my-4">
-              <span class="font-semibold"> Phone:</span>
+            </div>
+            <div class="my-4 flex gap-4 items-start">
+              <img src="@/assets/svgs/phone.svg" class="w-5" alt="phone" />
               <a href="tel:+14084644327" class="text-blue-400 hover:underline">
                 +14084644327
               </a>
-            </p>
+            </div>
           </div>
-          <div class="flex space-x-4 mt-3 justify-center lg:justify-start">
+          <div class="flex space-x-4 mt-3 justify-start">
             <div class="h-10 w-10 flex justify-center items-center">
               <a
                 href="https://www.linkedin.com/company/mavenhiring/"
@@ -83,76 +85,84 @@
           </div>
         </div>
         <div class="flex-1">
-          <form @submit.prevent="handleSubmit">
-            <div class="my-2">
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                v-model="form.name"
-                class="border p-2 rounded-lg w-80 border-gray-400"
-              />
-              <p v-if="errors.name" class="text-red-500 text-sm">
-                {{ errors.name }}
-              </p>
+          <div class="flex justify-center items-center">
+            <div class="w-full max-w-md">
+              <form @submit.prevent="handleSubmit" class="space-y-4">
+                <div class="flex space-x-4">
+                  <div class="flex-1">
+                    <label class="block font-semibold text-sm"
+                      >First name</label
+                    >
+                    <input
+                      type="text"
+                      v-model="form.firstName"
+                      class="border p-2 rounded-lg w-full border-gray-400 focus:outline-none focus:border-blue-500"
+                    />
+                    <p v-if="errors.firstName" class="text-red-500 text-sm">
+                      {{ errors.firstName }}
+                    </p>
+                  </div>
+                  <div class="flex-1">
+                    <label class="block font-semibold text-sm">Last name</label>
+                    <input
+                      type="text"
+                      v-model="form.lastName"
+                      class="border p-2 rounded-lg w-full border-gray-400 focus:outline-none focus:border-blue-500"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label class="block font-semibold text-sm">Email</label>
+                  <input
+                    type="email"
+                    v-model="form.email"
+                    class="border p-2 rounded-lg w-full border-gray-400 focus:outline-none focus:border-blue-500"
+                  />
+                  <p v-if="errors.email" class="text-red-500 text-sm">
+                    {{ errors.email }}
+                  </p>
+                </div>
+                <div>
+                  <label class="block font-semibold text-sm"
+                    >Phone number</label
+                  >
+                  <input
+                    type="text"
+                    v-model="form.phone"
+                    class="border p-2 rounded-lg w-full border-gray-400 focus:outline-none focus:border-blue-500"
+                  />
+                  <p v-if="errors.phone" class="text-red-500 text-sm">
+                    {{ errors.phone }}
+                  </p>
+                </div>
+                <div>
+                  <label class="block font-semibold text-sm">Message</label>
+                  <textarea
+                    v-model="form.message"
+                    class="border p-2 rounded-lg w-full border-gray-400 focus:outline-none focus:border-blue-500"
+                    rows="4"
+                  ></textarea>
+                  <p v-if="errors.message" class="text-red-500 text-sm">
+                    {{ errors.message }}
+                  </p>
+                </div>
+                <div class="flex justify-end">
+                  <button
+                    type="submit"
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 w-2/5"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
-            <div class="my-2">
-              <input
-                type="text"
-                name="email"
-                placeholder="Email"
-                v-model="form.email"
-                class="border p-2 rounded-lg w-80 border-gray-400"
-              />
-              <p v-if="errors.email" class="text-red-500 text-sm">
-                {{ errors.email }}
-              </p>
-            </div>
-            <div class="my-2">
-              <input
-                type="text"
-                name="phone"
-                placeholder="Phone"
-                v-model="form.phone"
-                class="border p-2 rounded-lg w-80 border-gray-400"
-              />
-              <p v-if="errors.phone" class="text-red-500 text-sm">
-                {{ errors.phone }}
-              </p>
-            </div>
-            <div class="my-2">
-              <textarea
-                name="message"
-                placeholder="Message"
-                v-model="form.message"
-                class="border p-2 rounded-lg w-80 border-gray-400"
-                rows="6"
-              />
-              <p v-if="errors.message" class="text-red-500 text-sm">
-                {{ errors.message }}
-              </p>
-            </div>
-            <button
-              type="submit"
-              class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-            >
-              Submit
-            </button>
-          </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-<style scoped>
-.hover-animate {
-  transition: transform 0.2s ease-in-out, height 0.1s ease-in-out;
-}
-.hover-animate:hover {
-  transform: scale(1.1);
-  height: 28px;
-}
-</style>
+
 <script>
 import * as yup from "yup";
 
@@ -160,7 +170,8 @@ export default {
   data() {
     return {
       form: {
-        name: "",
+        firstName: "",
+        lastName: "",
         email: "",
         phone: "",
         message: "",
@@ -171,7 +182,8 @@ export default {
   methods: {
     async handleSubmit() {
       const schema = yup.object().shape({
-        name: yup.string().required("Name is required"),
+        firstName: yup.string().required("First name is required"),
+        lastName: yup.string().optional(),
         email: yup
           .string()
           .email("Invalid email")
@@ -179,7 +191,7 @@ export default {
         phone: yup
           .string()
           .min(10, "Phone number must be exactly 10 digits")
-          .matches(/^\d+$/, "Phone number should contain only numbers")
+          .matches(/^[0-9]+$/, "Phone number should contain only numbers")
           .required("Phone number is required"),
         message: yup.string().required("Message cannot be empty"),
       });
@@ -187,8 +199,14 @@ export default {
       try {
         await schema.validate(this.form, { abortEarly: false });
         console.log("Form Submitted", this.form);
-        alert(`Hi ${this.form.name}, we’ll connect with you shortly...`);
-        this.form = { name: "", email: "", phone: "", message: "" };
+        alert(`Hi ${this.form.firstName}, we’ll connect with you shortly...`);
+        this.form = {
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        };
         this.errors = {};
       } catch (err) {
         this.errors = {};
@@ -200,3 +218,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.hover-animate {
+  transition: transform 0.2s ease-in-out, height 0.1s ease-in-out;
+}
+.hover-animate:hover {
+  transform: scale(1.1);
+  height: 28px;
+}
+</style>

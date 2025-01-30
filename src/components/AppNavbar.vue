@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="sticky top-0 p-2 md:px-16 flex justify-between items-center bg-primary z-50 shadow-md"
+    class="sticky top-0 p-2 px-6 md:px-16 flex justify-between items-center bg-primary z-50 shadow-md"
   >
     <div class="flex items-center">
       <img
@@ -103,7 +103,7 @@ export default {
       }
     },
     isActive(route) {
-      return this.$route.path === route ? "text-blue-500 underline" : "";
+      return this.$route.path === route ? "text-blue-500" : "";
     },
   },
   mounted() {

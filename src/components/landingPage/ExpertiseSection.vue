@@ -2,7 +2,7 @@
   <div class="mx-auto p-12">
     <div class="text-center mb-10">
       <h1 class="text-2xl lg:text-4xl font-bold text-center">Our Expertise</h1>
-      <p class="mt-4 text-lg text-gray-600">
+      <p class="text-lg text-gray-600 text-center mx-auto">
         With extensive experience in recruitment, staffing and business
         consulting, our team excels in
       </p>
