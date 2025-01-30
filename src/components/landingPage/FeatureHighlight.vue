@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto px-24 py-8 flex items-center flex-col lg:flex-row"
+    class="container mx-auto px-8 md:px-24 py-8 flex items-center flex-col lg:flex-row"
   >
     <div class="p-8 w-full lg:w-1/2">
       <img src="@/assets/work-image-1.jpeg" class="rounded-3xl" />
@@ -33,7 +33,7 @@
         required
         v-model="email"
         placeholder="Enter Your Email"
-        class="px-4 py-2 w-64 md:w-80 border border-gray-300 focus:outline-none"
+        class="px-4 py-2 w-60 md:w-80 border border-gray-300 focus:outline-none"
       />
       <button class="bg-black text-white px-4 py-3 hover:bg-gray-800">
         Subscribe

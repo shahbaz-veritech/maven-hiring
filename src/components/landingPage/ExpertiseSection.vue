@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto p-24">
+  <div class="mx-auto p-12 md:p-24">
     <div class="text-center mb-10">
       <h1 class="text-3xl md:text-5xl">Our Expertise</h1>
       <p class="mt-4 text-lg text-gray-600">
@@ -9,7 +9,7 @@
     </div>
 
     <div
-      class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+      class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1"
     >
       <div
         v-for="item in expertise"

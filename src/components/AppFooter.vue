@@ -1,6 +1,10 @@
 <template>
   <div class="bg-primary pt-8">
-    <img src="@/assets/svgs/footer.svg" alt="SVG Image" class="w-screen" />
+    <img
+      src="@/assets/svgs/footer.svg"
+      alt="SVG Image"
+      class="w-screen h-16 md:h-40"
+    />
 
     <footer class="footer text-white py-8 md:px-28 px-8">
       <div class="w-full flex flex-col md:flex-row gap-6">
@@ -111,7 +115,7 @@
         </div>
       </div>
 
-      <div class="text-center mt-20 mb-3">
+      <div class="text-center mt-20 pt-4 border-t">
         <p class="text-sm">
           &copy; Maven Hiring, {{ year }}. All Rights Reserved. Developed by
           <a href="https://veritech.ai" class="text-blue-400 hover:underline"

@@ -1,7 +1,7 @@
 <template>
-  <div class="flex justify-center items-center py-20 bg-primary">
+  <div class="flex justify-center items-center py-8 md:py-16 bg-primary">
     <div class="w-3/4">
-      <h1 class="text-3xl md:text-5xl text-center">About us</h1>
+      <h1 class="text-3xl md:text-5xl text-center mb-4">About us</h1>
 
       <p>
         Hello, I am

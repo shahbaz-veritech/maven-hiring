@@ -1,17 +1,19 @@
 <template>
-  <div class="mx-auto p-28 custom-gradient flex flex-col items-center">
-    <h1 class="text-3xl md:text-5xl">What markets do we recruit for?</h1>
-    <p class="mt-4 text-lg text-center">
+  <div class="mx-auto p-8 md:p-24 custom-gradient flex flex-col items-center">
+    <h1 class="text-3xl md:text-5xl text-center">
+      What markets do we recruit for?
+    </h1>
+    <p class="my-4 text-lg text-center">
       With our expertise and exclusive network, we can successfully recruit in
       All Markets
     </p>
     <div
-      class="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 gap-5"
+      class="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 gap-2"
     >
       <div
         v-for="(item, index) in industries"
         :key="index"
-        class="flex flex-col items-center mt-10"
+        class="flex flex-col items-center mb-2"
       >
         <img :src="item.image" class="filter grayscale w-20" alt="logo" />
         <p class="font-extrabold">{{ item.title }}</p>

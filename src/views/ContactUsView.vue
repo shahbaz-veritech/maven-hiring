@@ -1,8 +1,10 @@
 <template>
-  <div class="flex justify-center items-center py-20 bg-primary">
-    <div class="w-3/5">
-      <p class="text-4xl md:text-6xl font-normal text-center">Contact us</p>
-      <div class="flex flex-col md:flex-row justify-between gap-8 my-16">
+  <div class="flex justify-center items-center py-8 md:py-16 bg-primary">
+    <div class="md:w-3/5">
+      <p class="text-3xl md:text-5xl font-normal text-center mb-5">
+        Contact us
+      </p>
+      <div class="flex flex-col md:flex-row justify-between gap-8">
         <div class="flex-1">
           <form @submit.prevent="handleSubmit">
             <div class="my-2">
@@ -20,6 +22,7 @@
                 name="email"
                 placeholder="Email"
                 v-model="email"
+                required
                 class="border p-2 rounded-lg w-80 border-gray-400"
               />
             </div>
@@ -27,6 +30,7 @@
               <input
                 type="text"
                 name="phone"
+                required
                 placeholder="Phone"
                 v-model="phone"
                 class="border p-2 rounded-lg w-80 border-gray-400"
@@ -43,7 +47,7 @@
             </div>
             <button
               type="submit"
-              class="border border-blue-500 hover:border-blue-700 text-blue-500 hover:text-blue-700 py-2 px-6 mt-4 rounded-xl"
+              class="border border-blue-500 hover:border-blue-700 text-blue-500 hover:text-blue-700 py-2 px-6 mt-4 rounded-lg"
             >
               Submit
             </button>
