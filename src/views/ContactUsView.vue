@@ -12,38 +12,48 @@
                 type="text"
                 name="name"
                 placeholder="Name"
-                v-model="name"
+                v-model="form.name"
                 class="border p-2 rounded-lg w-80 border-gray-400"
               />
+              <p v-if="errors.name" class="text-red-500 text-sm">
+                {{ errors.name }}
+              </p>
             </div>
             <div class="my-2">
               <input
-                type="email"
+                type="text"
                 name="email"
                 placeholder="Email"
-                v-model="email"
-                required
+                v-model="form.email"
                 class="border p-2 rounded-lg w-80 border-gray-400"
               />
+              <p v-if="errors.email" class="text-red-500 text-sm">
+                {{ errors.email }}
+              </p>
             </div>
             <div class="my-2">
               <input
                 type="text"
                 name="phone"
-                required
                 placeholder="Phone"
-                v-model="phone"
+                v-model="form.phone"
                 class="border p-2 rounded-lg w-80 border-gray-400"
               />
+              <p v-if="errors.phone" class="text-red-500 text-sm">
+                {{ errors.phone }}
+              </p>
             </div>
             <div class="my-2">
               <textarea
                 name="message"
                 placeholder="Message"
-                v-model="message"
+                v-model="form.message"
                 class="border p-2 rounded-lg w-80 border-gray-400"
                 rows="6"
               />
+              <p v-if="errors.message" class="text-red-500 text-sm">
+                {{ errors.message }}
+              </p>
             </div>
             <button
               type="submit"
@@ -147,29 +157,48 @@
 }
 </style>
 <script>
+import * as yup from "yup";
+
 export default {
   data() {
     return {
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
+      form: {
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      },
+      errors: {},
     };
   },
   methods: {
-    handleSubmit() {
-      const formData = {
-        name: this.name,
-        email: this.email,
-        phone: this.phone,
-        message: this.message,
-      };
-      console.log(formData);
+    async handleSubmit() {
+      const schema = yup.object().shape({
+        name: yup.string().required("Name is required"),
+        email: yup
+          .string()
+          .email("Invalid email")
+          .required("Email is required"),
+        phone: yup
+          .string()
+          .required("Phone number is required")
+          .matches(/^\d+$/, "Phone number should contain only numbers")
+          .length(10, "Phone number must be exactly 10 digits"),
+        message: yup.string().required("Message cannot be empty"),
+      });
 
-      this.name = "";
-      this.email = "";
-      this.phone = "";
-      this.message = "";
+      try {
+        await schema.validate(this.form, { abortEarly: false });
+        console.log("Form Submitted", this.form);
+
+        this.form = { name: "", email: "", phone: "", message: "" };
+        this.errors = {};
+      } catch (err) {
+        this.errors = {};
+        err.inner.forEach((e) => {
+          this.errors[e.path] = e.message;
+        });
+      }
     },
   },
 };
