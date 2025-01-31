@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto px-8 md:px-24 py-8 flex items-center flex-col lg:flex-row"
+    class="min-h-[90dvh] bg-cover bg-center bg-no-repeat feature__preview mx-auto px-8 md:px-24 py-8 flex items-center flex-col lg:flex-row"
   >
     <div class="p-8 w-full lg:w-1/2">
       <img src="@/assets/work-image-1.jpeg" class="rounded-3xl" />
@@ -27,21 +27,17 @@
     class="custom-box p-4 flex items-center gap-4 justify-around flex-col md:flex-row bg-primary"
   >
     <h2 class="text-white text-xl font-bold lg:text-4xl">Stay in Touch</h2>
-    <form class="flex flex-col md:flex-row" @submit.prevent="subscribe">
-      <div class="flex flex-col h-12">
+    <form class="flex flex-row" @submit.prevent="subscribe">
+      <div class="flex flex-col">
         <input
-          type="text"
+          type="email"
           v-model="email"
+          required
           placeholder="Enter Your Email"
-          class="px-4 py-2 w-60 md:w-80 border border-gray-300 focus:outline-none h-9"
+          class="px-4 py-2 w-52 md:w-80 border border-gray-300 focus:outline-none"
         />
-        <p v-if="error" class="text-red-500 text-sm">
-          {{ error }}
-        </p>
       </div>
-      <button
-        class="bg-black text-white px-4 py-2 hover:bg-gray-800 mt-4 md:mt-0 h-9"
-      >
+      <button class="bg-black text-white px-4 py-2 hover:bg-gray-800 mt-0">
         Subscribe
       </button>
     </form>
@@ -56,16 +52,16 @@
     rgb(21, 101, 192) 100%
   );
 }
+.feature__preview {
+  background-image: url("https://cdn.prod.website-files.com/66a5de2d68f9fcecf7c1bf04/66f67a23f993f27fdc12d2fe_grid%20background.svg");
+}
 </style>
 
 <script>
-import * as yup from "yup";
-
 export default {
   data() {
     return {
       email: "",
-      error: "",
       features: [
         {
           title: "Zero Cost Upfront",
@@ -96,22 +92,8 @@ export default {
     };
   },
   methods: {
-    async subscribe() {
-      const schema = yup.object().shape({
-        email: yup
-          .string()
-          .email("Invalid email format")
-          .required("Email is required"),
-      });
-
-      try {
-        await schema.validate({ email: this.email });
-        alert("Jobs alerts are added.");
-        this.email = "";
-        this.error = "";
-      } catch (err) {
-        this.error = err.message;
-      }
+    subscribe() {
+      console.log(this.email);
     },
   },
 };

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primary pt-8">
+  <div class="pt-8">
     <img
       src="@/assets/svgs/footer.svg"
       alt="SVG Image"

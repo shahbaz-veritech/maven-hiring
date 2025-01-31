@@ -1,7 +1,8 @@
 <template>
   <nav
-    class="sticky top-0 p-2 px-6 md:px-16 flex justify-between items-center bg-primary z-50 shadow-md"
+    class="sticky top-0 max-w-full mx-auto flex items-center justify-between w-full px-8 md:px-20 py-4 bg-primary z-50 shadow-md"
   >
+    <!-- class="sticky top-0 p-2 px-6 md:px-16 flex justify-between items-center bg-primary z-50 shadow-md" -->
     <div class="flex items-center">
       <img
         src="@/assets/logo-2.png"

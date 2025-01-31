@@ -11,15 +11,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 </style>
-<script>
+
+<script setup>
+import { watch } from "vue";
+import { useRoute } from "vue-router";
 import AppNavbar from "@/components/AppNavbar";
 import AppFooter from "@/components/AppFooter";
 
-export default {
-  name: "HomeView",
-  components: {
-    AppNavbar,
-    AppFooter,
+const route = useRoute();
+
+watch(
+  () => route.meta.title,
+  (dynamicTitle) => {
+    document.title = dynamicTitle || "Maven Hiring";
   },
-};
+  { immediate: true }
+);
 </script>

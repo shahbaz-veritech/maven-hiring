@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto p-12">
+  <div class="mx-auto p-12 bg-secondry">
     <div class="text-center mb-10">
       <h1 class="text-2xl lg:text-4xl font-bold text-center">Our Expertise</h1>
       <p class="text-lg text-gray-600 text-center mx-auto">
@@ -9,12 +9,12 @@
     </div>
 
     <div
-      class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1"
+      class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
     >
       <div
         v-for="item in expertise"
         :key="item.id"
-        class="flex flex-col items-center text-center p-6 hover:shadow-lg rounded-lg"
+        class="flex flex-col items-center text-center p-6 hover:shadow-lg rounded-lg bg-white"
       >
         <img :src="item.image" alt="icon" class="w-16 h-16 mb-4" />
         <h2 class="text-xl font-semibold">{{ item.title }}</h2>

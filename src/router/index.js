@@ -11,16 +11,19 @@ const routes = [
     path: "/about",
     name: "about",
     component: () => import("../views/AboutView.vue"),
+    meta: { title: "About Us" },
   },
   {
     path: "/contact",
     name: "contact",
     component: () => import("../views/ContactUsView.vue"),
+    meta: { title: "Contact Us" },
   },
   {
     path: "/:catchAll(.*)",
     name: "404-page-not-found",
     component: () => import("../views/Error404Page.vue"),
+    meta: { title: "Not Found" },
   },
 ];
 
