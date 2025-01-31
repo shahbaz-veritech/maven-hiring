@@ -164,7 +164,7 @@
 </template>
 
 <script setup>
-import { ref, reactive } from "vue";
+import { reactive } from "vue";
 import * as yup from "yup";
 
 const form = reactive({
