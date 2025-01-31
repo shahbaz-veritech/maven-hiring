@@ -1,5 +1,7 @@
 <template>
-  <div class="custom-gradient py-12">
+  <div
+    class="bg-cover bg-center bg-no-repeat feature__preview min-h-[40vh] py-12"
+  >
     <div class="max-w-7xl mx-auto flex flex-col items-center px-4">
       <h1 class="text-2xl lg:text-4xl font-bold text-center">
         What markets do we recruit for?
@@ -14,7 +16,7 @@
         <div
           v-for="(item, index) in industries"
           :key="index"
-          class="flex flex-col items-center mb-2 hover:shadow-lg rounded-md w-36 py-4 px-10"
+          class="flex flex-col items-center mb-2 hover:shadow-lg hover:bg-white rounded-md w-36 py-4 px-10"
         >
           <img :src="item.image" class="filter grayscale w-20" alt="logo" />
           <p
@@ -35,6 +37,9 @@
     rgb(143, 154, 194) 0%,
     rgb(249, 249, 249) 100%
   );
+}
+.feature__preview {
+  background-image: url("https://cdn.prod.website-files.com/66a5de2d68f9fcecf7c1bf04/66f67a23f993f27fdc12d2fe_grid%20background.svg");
 }
 </style>
 <script>
