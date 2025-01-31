@@ -61,44 +61,38 @@
 }
 </style>
 
-<script>
-export default {
-  data() {
-    return {
-      email: "",
-      features: [
-        {
-          title: "Zero Cost Upfront",
-          description:
-            "No upfront payment, you only pay us when you successfully hire a candidate profile shared by us.",
-        },
-        {
-          title: "We Move Fast",
-          description:
-            "Takes us on average ~ 2 weeks to successfully fill a role.",
-        },
-        {
-          title: "Experts in Every Market",
-          description:
-            "Our extensive network has recruiters who are experts in every market who stay on top of the latest data and trends.",
-        },
-        {
-          title: "We Are A Full Service Strategic Partner",
-          description:
-            "Whether it is optimizing your job description, managing the interview process and or assisting with negotiations, we will be there with you every step of the way!",
-        },
-        {
-          title: "Tailor Made Services",
-          description:
-            "We work on client first approach; each client is different and our services are tailor made to fit the client need.",
-        },
-      ],
-    };
+<script setup>
+import { ref } from "vue";
+
+const email = ref("");
+const features = ref([
+  {
+    title: "Zero Cost Upfront",
+    description:
+      "No upfront payment, you only pay us when you successfully hire a candidate profile shared by us.",
   },
-  methods: {
-    subscribe() {
-      console.log(this.email);
-    },
+  {
+    title: "We Move Fast",
+    description: "Takes us on average ~ 2 weeks to successfully fill a role.",
   },
+  {
+    title: "Experts in Every Market",
+    description:
+      "Our extensive network has recruiters who are experts in every market who stay on top of the latest data and trends.",
+  },
+  {
+    title: "We Are A Full Service Strategic Partner",
+    description:
+      "Whether it is optimizing your job description, managing the interview process and or assisting with negotiations, we will be there with you every step of the way!",
+  },
+  {
+    title: "Tailor Made Services",
+    description:
+      "We work on client first approach; each client is different and our services are tailor made to fit the client need.",
+  },
+]);
+
+const subscribe = () => {
+  console.log(email.value);
 };
 </script>

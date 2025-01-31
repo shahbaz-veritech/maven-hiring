@@ -30,50 +30,39 @@
   </div>
 </template>
 
+<script setup>
+import { ref } from "vue";
+
+const industries = ref([
+  {
+    title: "Technology",
+    image: require("@/assets/industries/nanotechnology.png"),
+  },
+  {
+    title: "Healthcare",
+    image: require("@/assets/industries/medical-team.png"),
+  },
+  {
+    title: "Finance",
+    image: require("@/assets/industries/financial-profit.png"),
+  },
+  {
+    title: "Manufacturing",
+    image: require("@/assets/industries/manufacture.png"),
+  },
+  {
+    title: "Professional Services",
+    image: require("@/assets/industries/togetherness.png"),
+  },
+  {
+    title: "Non-Profit",
+    image: require("@/assets/industries/donation.png"),
+  },
+]);
+</script>
+
 <style scoped>
-.custom-gradient {
-  background: linear-gradient(
-    180deg,
-    rgb(143, 154, 194) 0%,
-    rgb(249, 249, 249) 100%
-  );
-}
 .feature__preview {
   background-image: url("https://cdn.prod.website-files.com/66a5de2d68f9fcecf7c1bf04/66f67a23f993f27fdc12d2fe_grid%20background.svg");
 }
 </style>
-<script>
-export default {
-  name: "IndustriesSection",
-  data() {
-    return {
-      industries: [
-        {
-          title: "Technology",
-          image: require("@/assets/industries/nanotechnology.png"),
-        },
-        {
-          title: "Healthcare",
-          image: require("@/assets/industries/medical-team.png"),
-        },
-        {
-          title: "Finance",
-          image: require("@/assets/industries/financial-profit.png"),
-        },
-        {
-          title: "Manufacturing",
-          image: require("@/assets/industries/manufacture.png"),
-        },
-        {
-          title: "Professional Services",
-          image: require("@/assets/industries/togetherness.png"),
-        },
-        {
-          title: "Non-Profit",
-          image: require("@/assets/industries/donation.png"),
-        },
-      ],
-    };
-  },
-};
-</script>

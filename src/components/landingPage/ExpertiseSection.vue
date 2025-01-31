@@ -26,7 +26,9 @@
 </template>
 
 <script setup>
-const services = [
+import { ref } from "vue";
+
+const services = ref([
   {
     title: "Contingency Search",
     description:
@@ -57,5 +59,5 @@ const services = [
       "One-time fee, regardless of hiring outcome",
     ],
   },
-];
+]);
 </script>

@@ -91,7 +91,7 @@
                 <div class="flex space-x-4">
                   <div class="flex-1">
                     <label class="block font-semibold text-sm"
-                      >First name</label
+                      >First Name</label
                     >
                     <input
                       type="text"
@@ -103,7 +103,7 @@
                     </p>
                   </div>
                   <div class="flex-1">
-                    <label class="block font-semibold text-sm">Last name</label>
+                    <label class="block font-semibold text-sm">Last Name</label>
                     <input
                       type="text"
                       v-model="form.lastName"
@@ -124,7 +124,7 @@
                 </div>
                 <div>
                   <label class="block font-semibold text-sm"
-                    >Phone number</label
+                    >Phone Number</label
                   >
                   <input
                     type="text"
@@ -163,59 +163,49 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, reactive } from "vue";
 import * as yup from "yup";
 
-export default {
-  data() {
-    return {
-      form: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        message: "",
-      },
-      errors: {},
-    };
-  },
-  methods: {
-    async handleSubmit() {
-      const schema = yup.object().shape({
-        firstName: yup.string().required("First name is required"),
-        lastName: yup.string().optional(),
-        email: yup
-          .string()
-          .email("Invalid email")
-          .required("Email is required"),
-        phone: yup
-          .string()
-          .min(10, "Phone number must be exactly 10 digits")
-          .matches(/^[0-9]+$/, "Phone number should contain only numbers")
-          .required("Phone number is required"),
-        message: yup.string().required("Message cannot be empty"),
-      });
+const form = reactive({
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  message: "",
+});
 
-      try {
-        await schema.validate(this.form, { abortEarly: false });
-        console.log("Form Submitted", this.form);
-        alert(`Hi ${this.form.firstName}, we’ll connect with you shortly...`);
-        this.form = {
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
-        };
-        this.errors = {};
-      } catch (err) {
-        this.errors = {};
-        err.inner.forEach((e) => {
-          this.errors[e.path] = e.message;
-        });
-      }
-    },
-  },
+const errors = reactive({});
+
+const schema = yup.object().shape({
+  firstName: yup.string().required("First name is required"),
+  email: yup.string().email("Invalid email").required("Email is required"),
+  phone: yup
+    .string()
+    .matches(/^\d{10}$/, "Phone number must be 10 digits")
+    .required("Phone number is required"),
+  message: yup.string().required("Message cannot be empty"),
+});
+const handleSubmit = async () => {
+  try {
+    await schema.validate(form, { abortEarly: false });
+    console.log("Form Submitted:", form);
+    alert(`Hi ${form.firstName}, we’ll connect with you shortly...`);
+
+    Object.assign(form, {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+    Object.keys(errors).forEach((key) => delete errors[key]);
+  } catch (err) {
+    Object.keys(errors).forEach((key) => delete errors[key]);
+    err.inner.forEach((e) => {
+      errors[e.path] = e.message;
+    });
+  }
 };
 </script>
 

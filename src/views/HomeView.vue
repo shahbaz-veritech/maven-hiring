@@ -1,9 +1,9 @@
 <template>
   <HeroSection />
-  <!-- <MissionSection /> -->
   <ServiceSection />
   <ExpertiseSection />
   <IndustriesSection />
+  <MissionSection />
   <AppendixSection />
   <FeatureHighlight />
 </template>
@@ -12,7 +12,7 @@
 import {
   HeroSection,
   ExpertiseSection,
-  // MissionSection,
+  MissionSection,
   IndustriesSection,
   FeatureHighlight,
   ServiceSection,
