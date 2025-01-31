@@ -1,28 +1,21 @@
 <template>
   <HeroSection />
+  <!-- <MissionSection /> -->
+  <ServiceSection />
   <ExpertiseSection />
-  <MissionSection />
   <IndustriesSection />
+  <AppendixSection />
   <FeatureHighlight />
 </template>
 
-<script>
+<script setup>
 import {
   HeroSection,
   ExpertiseSection,
-  MissionSection,
+  // MissionSection,
   IndustriesSection,
   FeatureHighlight,
+  ServiceSection,
+  AppendixSection,
 } from "@/components/landingPage";
-
-export default {
-  name: "HomeView",
-  components: {
-    ExpertiseSection,
-    MissionSection,
-    IndustriesSection,
-    HeroSection,
-    FeatureHighlight,
-  },
-};
 </script>
