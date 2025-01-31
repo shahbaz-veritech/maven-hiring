@@ -103,7 +103,7 @@ export default {
       }
     },
     isActive(route) {
-      return this.$route.path === route ? "text-blue-500" : "";
+      return this.$route.path === route ? "!text-blue-500" : "";
     },
   },
   mounted() {
