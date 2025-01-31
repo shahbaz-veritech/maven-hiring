@@ -1,26 +1,28 @@
 <template>
-  <div class="mx-auto p-12 custom-gradient flex flex-col items-center">
-    <h1 class="text-2xl lg:text-4xl font-bold text-center">
-      What markets do we recruit for?
-    </h1>
-    <p class="my-4 mb-6 text-lg text-gray-600 text-center">
-      With our expertise and exclusive network, we can successfully recruit in
-      All Markets
-    </p>
-    <div
-      class="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 gap-2"
-    >
+  <div class="custom-gradient py-12">
+    <div class="max-w-7xl mx-auto flex flex-col items-center px-4">
+      <h1 class="text-2xl lg:text-4xl font-bold text-center">
+        What markets do we recruit for?
+      </h1>
+      <p class="my-4 mb-6 text-lg text-gray-600 text-center">
+        With our expertise and exclusive network, we can successfully recruit in
+        All Markets
+      </p>
       <div
-        v-for="(item, index) in industries"
-        :key="index"
-        class="flex flex-col items-center mb-2 hover:shadow-lg rounded-md"
+        class="w-full flex flex-wrap justify-center lg:justify-between gap-2"
       >
-        <img :src="item.image" class="filter grayscale w-20" alt="logo" />
-        <p
-          class="text-center text-gray-800 font-semibold leading-5 text-base mt-2"
+        <div
+          v-for="(item, index) in industries"
+          :key="index"
+          class="flex flex-col items-center mb-2 hover:shadow-lg rounded-md w-36 py-4 px-10"
         >
-          {{ item.title }}
-        </p>
+          <img :src="item.image" class="filter grayscale w-20" alt="logo" />
+          <p
+            class="text-center text-gray-800 font-semibold leading-5 text-base mt-2"
+          >
+            {{ item.title }}
+          </p>
+        </div>
       </div>
     </div>
   </div>

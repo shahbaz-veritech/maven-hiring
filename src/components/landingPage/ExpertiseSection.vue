@@ -1,79 +1,61 @@
 <template>
-  <div class="mx-auto p-12 bg-secondry">
-    <div class="text-center mb-10">
-      <h1 class="text-2xl lg:text-4xl font-bold text-center">Our Expertise</h1>
-      <p class="text-lg text-gray-600 text-center mx-auto">
-        With extensive experience in recruitment, staffing and business
-        consulting, our team excels in
-      </p>
-    </div>
+  <div class="bg-secondry">
+    <section id="services" class="py-12 max-w-7xl mx-auto px-4">
+      <div class="container mx-auto">
+        <h1 class="text-2xl lg:text-4xl font-bold text-center mb-3">
+          Our Expertise
+        </h1>
 
-    <div
-      class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-    >
-      <div
-        v-for="item in expertise"
-        :key="item.id"
-        class="flex flex-col items-center text-center p-6 hover:shadow-lg rounded-lg bg-white"
-      >
-        <img :src="item.image" alt="icon" class="w-16 h-16 mb-4" />
-        <h2 class="text-xl font-semibold">{{ item.title }}</h2>
-        <p class="text-gray-600 mt-2">{{ item.description }}</p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            v-for="service in services"
+            :key="service.title"
+            class="rounded-lg shadow-md p-6 bg-white"
+          >
+            <h3 class="text-xl font-semibold mb-4">{{ service.title }}</h3>
+            <p class="text-gray-600 mb-4">{{ service.description }}</p>
+            <h4 class="font-semibold mb-2">What's included?</h4>
+            <ul class="list-disc list-inside text-sm text-gray-600">
+              <li v-for="item in service.included" :key="item">{{ item }}</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
-<script>
-export default {
-  name: "ExpertiseSection",
-  data() {
-    return {
-      expertise: [
-        {
-          id: 101,
-          title: "Executive Search",
-          image: require("@/assets/expertise/building.png"),
-          description:
-            "Connecting you with top-tier executives to lead your organization to success.",
-        },
-        {
-          id: 102,
-          title: "Contingency Recruitment",
-          image: require("@/assets/expertise/founder.png"),
-          description:
-            "Delivering skilled candidates quickly to meet your urgent hiring needs.",
-        },
-        {
-          id: 103,
-          title: "Permanent Placement",
-          image: require("@/assets/expertise/job-offer.png"),
-          description:
-            "Securing the best permanent talent to drive long-term growth for your company.",
-        },
-        {
-          id: 104,
-          title: "Temporary & Contract Staffing",
-          image: require("@/assets/expertise/contingency.png"),
-          description:
-            "Providing flexible staffing solutions to meet your short-term and project-based requirements.",
-        },
-        {
-          id: 105,
-          title: "HR Consulting",
-          image: require("@/assets/expertise/consultation.png"),
-          description:
-            "Offering strategic HR guidance to enhance your organizational effectiveness.",
-        },
-        {
-          id: 106,
-          title: "Talent Management",
-          image: require("@/assets/expertise/talent-management.png"),
-          description:
-            "Helping you develop and retain the best talent to sustain your competitive edge.",
-        },
-      ],
-    };
+<script setup>
+const services = [
+  {
+    title: "Contingency Search",
+    description:
+      "One-time fee, guaranteed. Operating on a 'no win, no fee' basis, we offer flexible, competitive candidate sourcing.",
+    included: [
+      "Source and screen relevant candidates",
+      "Manage all candidate communication",
+      "Employment guarantee for all placements",
+    ],
   },
-};
+  {
+    title: "Retained Search",
+    description:
+      "Flat monthly fee + discounted placement fee. Discover top talent exclusively with our retained search services.",
+    included: [
+      "Set allocation of hours each week",
+      "Hire unlimited candidates each month",
+      "Employment guarantee for all placements",
+    ],
+  },
+  {
+    title: "Sourcing Services",
+    description:
+      "One-time fee, no guarantee. Receive a list of pre-vetted candidates who have expressed interest in your role.",
+    included: [
+      "Tailored sourcing services",
+      "Pre-vetted candidates' contact information",
+      "One-time fee, regardless of hiring outcome",
+    ],
+  },
+];
 </script>
