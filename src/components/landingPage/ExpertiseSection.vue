@@ -10,7 +10,7 @@
           <div
             v-for="service in services"
             :key="service.title"
-            class="rounded-lg shadow-md p-6 bg-white"
+            class="rounded-lg hover:shadow-md p-6 bg-white"
           >
             <h3 class="text-xl font-semibold mb-4">{{ service.title }}</h3>
             <p class="text-gray-600 mb-4">{{ service.description }}</p>
