@@ -17,7 +17,7 @@
             <p class="text-gray-800 font-semibold leading-5 text-base">
               {{ feature.title }}
             </p>
-            <p class="text-sm text-gray-600">- {{ feature.description }}</p>
+            <p class="text-sm text-gray-600">{{ feature.description }}</p>
           </div>
         </li>
       </ul>

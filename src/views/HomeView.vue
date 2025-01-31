@@ -1,5 +1,6 @@
 <template>
   <HeroSection />
+  <ServiceSection />
   <ExpertiseSection />
   <MissionSection />
   <IndustriesSection />
@@ -13,6 +14,7 @@ import {
   MissionSection,
   IndustriesSection,
   FeatureHighlight,
+  ServiceSection,
 } from "@/components/landingPage";
 
 export default {
@@ -23,6 +25,7 @@ export default {
     IndustriesSection,
     HeroSection,
     FeatureHighlight,
+    ServiceSection,
   },
 };
 </script>
