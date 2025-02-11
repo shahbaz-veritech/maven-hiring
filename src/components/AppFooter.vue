@@ -186,12 +186,7 @@
 }
 </style>
 
-<script>
-export default {
-  data() {
-    return {
-      year: new Date().getFullYear(),
-    };
-  },
-};
+<script setup>
+import { ref } from "vue";
+const year = ref(new Date().getFullYear());
 </script>

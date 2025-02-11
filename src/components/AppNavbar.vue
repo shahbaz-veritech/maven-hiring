@@ -79,40 +79,45 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isMenuOpen: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
-    },
-    closeMenu() {
-      this.isMenuOpen = false;
-    },
-    handleClickOutside(event) {
-      if (
-        this.isMenuOpen &&
-        !this.$refs.menu.contains(event.target) &&
-        !event.target.closest("button")
-      ) {
-        this.closeMenu();
-      }
-    },
-    isActive(route) {
-      return this.$route.path === route ? "!text-blue-500" : "";
-    },
-  },
-  mounted() {
-    document.addEventListener("click", this.handleClickOutside);
-  },
-  beforeUnmount() {
-    document.removeEventListener("click", this.handleClickOutside);
-  },
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from "vue";
+import { useRoute } from "vue-router";
+
+const isMenuOpen = ref(false);
+const menuRef = ref(null);
+
+const route = useRoute();
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
 };
+
+const closeMenu = () => {
+  isMenuOpen.value = false;
+};
+
+const handleClickOutside = (event) => {
+  if (
+    isMenuOpen.value &&
+    menuRef.value &&
+    !menuRef.value.contains(event.target) &&
+    !event.target.closest("button")
+  ) {
+    closeMenu();
+  }
+};
+
+const isActive = (path) => {
+  return route.path === path ? "!text-blue-500" : "";
+};
+
+onMounted(() => {
+  document.addEventListener("click", handleClickOutside);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleClickOutside);
+});
 </script>
 
 <style>
