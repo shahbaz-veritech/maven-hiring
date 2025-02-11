@@ -23,63 +23,17 @@
               </a>
             </div>
             <div class="my-4 flex gap-4 items-start">
-              <img src="@/assets/svgs/phone.svg" class="w-5" alt="phone" />
-              <a href="tel:+14084644327" class="text-blue-400 hover:underline">
-                +14084644327
-              </a>
-            </div>
-          </div>
-          <div class="flex space-x-4 mt-3 justify-start">
-            <div class="h-10 w-10 flex justify-center items-center">
+              <img
+                src="@/assets/svgs/linkedin-black.svg"
+                class="w-6 h-6 text-red-300"
+                alt="linkedin"
+              />
               <a
                 href="https://www.linkedin.com/company/mavenhiring/"
+                class="text-blue-400 hover:underline"
                 target="_blank"
-                class="bg-blue-800 rounded-full flex justify-center items-center p-1"
               >
-                <img
-                  src="@/assets/svgs/linkedin.svg"
-                  alt="linkedin icon"
-                  class="hover-animate h-6"
-                />
-              </a>
-            </div>
-            <div class="h-10 w-10 flex justify-center items-center">
-              <a
-                href="https://www.x.com/"
-                target="_blank"
-                class="bg-black rounded-full flex justify-center items-center p-1"
-              >
-                <img
-                  src="@/assets/svgs/X.svg"
-                  alt="x icon"
-                  class="hover-animate h-6"
-                />
-              </a>
-            </div>
-            <div class="h-10 w-10 flex justify-center items-center">
-              <a
-                href="https://www.facebook.com/"
-                target="_blank"
-                class="bg-blue-800 rounded-full flex justify-center items-center p-1"
-              >
-                <img
-                  src="@/assets/svgs/facebook.svg"
-                  alt="facebook icon"
-                  class="hover-animate h-6"
-                />
-              </a>
-            </div>
-            <div class="h-10 w-10 flex justify-center items-center">
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                class="bg-pink-600 rounded-full flex justify-center items-center p-1"
-              >
-                <img
-                  src="@/assets/svgs/instagram.svg"
-                  alt="instagram-icon"
-                  class="hover-animate h-6"
-                />
+                linkedin/mavenhiring
               </a>
             </div>
           </div>
@@ -208,13 +162,3 @@ const handleSubmit = async () => {
   }
 };
 </script>
-
-<style scoped>
-.hover-animate {
-  transition: transform 0.2s ease-in-out, height 0.1s ease-in-out;
-}
-.hover-animate:hover {
-  transform: scale(1.1);
-  height: 28px;
-}
-</style>

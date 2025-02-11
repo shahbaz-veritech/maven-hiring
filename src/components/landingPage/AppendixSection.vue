@@ -14,7 +14,7 @@
         <div
           v-for="item in expertise"
           :key="item.id"
-          class="flex flex-col items-center text-center p-6 hover:shadow-lg rounded-lg bg-white min-h-64"
+          class="flex flex-col items-center text-center p-6 hover:shadow-lg rounded-lg max-h-fit bg-white min-h-64"
         >
           <img :src="item.image" alt="icon" class="w-16 h-16 mb-4" />
           <h2 class="text-xl font-semibold">{{ item.title }}</h2>
@@ -29,7 +29,8 @@
               <button
                 v-if="item.description.length > 100"
                 @click="toggleShowMore(item)"
-                class="text-blue-500 underline"
+                class="text-blue-500 underline transition-all duration-300 overflow-hidden"
+                :style="{ maxHeight: item.showFull ? '300px' : '30px' }"
               >
                 {{ item.showFull ? "Show Less" : "Show More" }}
               </button>

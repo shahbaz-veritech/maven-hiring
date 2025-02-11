@@ -103,7 +103,7 @@ const features = ref([
     title: "Zero Cost Upfront",
     description:
       "No upfront payment, you only pay us when you successfully hire a candidate profile shared by us.",
-    isOpen: true,
+    isOpen: false,
   },
   {
     title: "We Move Fast",
