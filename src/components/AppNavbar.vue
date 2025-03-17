@@ -20,12 +20,20 @@
           >Home</router-link
         >
         <router-link
-          to="/about"
+          to="/about-meena"
           :class="[
             'text-gray-700 hover:text-blue-500 font-semibold',
-            isActive('/about'),
+            isActive('/about-meena'),
           ]"
-          >About us</router-link
+          >About</router-link
+        >
+        <router-link
+          to="/services"
+          :class="[
+            'text-gray-700 hover:text-blue-500 font-semibold',
+            isActive('/services'),
+          ]"
+          >Services</router-link
         >
         <router-link
           to="/contact"
@@ -62,10 +70,21 @@
             >Home</router-link
           >
           <router-link
-            to="/about"
-            :class="['block px-4 py-2 hover:bg-gray-200', isActive('/about')]"
+            to="/about-meena"
+            :class="[
+              'block px-4 py-2 hover:bg-gray-200',
+              isActive('/about-meena'),
+            ]"
             @click="closeMenu"
             >About us</router-link
+          >
+          <router-link
+            to="/services"
+            :class="[
+              'text-gray-700 hover:text-blue-500 font-semibold',
+              isActive('/services'),
+            ]"
+            >Services</router-link
           >
           <router-link
             to="/contact"

@@ -3,8 +3,8 @@
     <section class="py-12 max-w-7xl mx-auto px-4">
       <div class="text-center mb-10">
         <p class="text-lg text-gray-600 text-center mx-auto">
-          With extensive experience in recruitment, staffing and business
-          consulting, our team excels in
+          With extensive experience in recruitment, we also offer staffing and
+          business consulting services.
         </p>
       </div>
 
@@ -56,10 +56,10 @@ const expertise = ref([
   },
   {
     id: 102,
-    title: "On Demand - Contingency Recruitment",
+    title: "Consulting Services",
     image: require("@/assets/expertise/founder.png"),
     description:
-      "On demand talent acquisition for hyper growth startups. Our expert team connects you with top-tier Go-to-Market (GTM) professionals through flexible and efficient recruiting solutions. Whether you need an exclusive retained search, contingency recruiting, or a curated list of pre-vetted candidates, we provide the talent you need to drive your company's rapid growth and success. Partner with us to build a world-class team that scales with your ambitions.",
+      "We provide consulting services to hyper growth startups on specific talent needs. We provide market research on talent availability, salaries, hiring costs, availability of office infrastructure suiting to our client needs.",
     showFull: false,
   },
   {

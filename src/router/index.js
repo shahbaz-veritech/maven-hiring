@@ -8,10 +8,16 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/about",
+    path: "/about-meena",
     name: "about",
     component: () => import("../views/AboutView.vue"),
-    meta: { title: "About Us" },
+    meta: { title: "About" },
+  },
+  {
+    path: "/services",
+    name: "services",
+    component: () => import("../views/ServicesView.vue"),
+    meta: { title: "Services" },
   },
   {
     path: "/contact",

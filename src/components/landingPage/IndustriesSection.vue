@@ -10,13 +10,11 @@
         With our expertise and exclusive network, we can successfully recruit in
         All Markets
       </p>
-      <div
-        class="w-full flex flex-wrap justify-center lg:justify-between gap-2"
-      >
+      <div class="w-full flex flex-wrap justify-center gap-2">
         <div
           v-for="(item, index) in industries"
           :key="index"
-          class="flex flex-col items-center mb-2 hover:shadow-lg hover:bg-white rounded-md w-36 py-4 px-10"
+          class="flex flex-col items-center mb-2 hover:shadow-lg hover:bg-white rounded-md w-44 py-4 px-10"
         >
           <img :src="item.image" class="w-20" alt="logo" />
           <p
@@ -35,24 +33,36 @@ import { ref } from "vue";
 
 const industries = ref([
   {
-    title: "Technology",
+    title: "Tech/IT",
     image: require("@/assets/industries/nanotechnology.png"),
   },
   {
-    title: "Healthcare",
-    image: require("@/assets/industries/medical-team.png"),
-  },
-  {
-    title: "Finance",
-    image: require("@/assets/industries/financial-profit.png"),
+    title: "Enginnering",
+    image: require("@/assets/industries/engineering.png"),
   },
   {
     title: "Manufacturing",
     image: require("@/assets/industries/manufacture.png"),
   },
   {
-    title: "Professional Services",
+    title: "Healthcare",
+    image: require("@/assets/industries/medical-team.png"),
+  },
+  {
+    title: "Banking and Finance",
+    image: require("@/assets/industries/financial-profit.png"),
+  },
+  {
+    title: "Marketing and Media",
     image: require("@/assets/industries/togetherness.png"),
+  },
+  {
+    title: "Insurance",
+    image: require("@/assets/industries/insurance.png"),
+  },
+  {
+    title: "Retail",
+    image: require("@/assets/industries/retail.png"),
   },
   {
     title: "Non-Profit",

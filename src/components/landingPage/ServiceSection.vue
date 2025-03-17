@@ -1,10 +1,14 @@
 <template>
   <section id="services" class="py-12 max-w-7xl mx-auto px-4 bg-white">
-    <div class="flex items-center flex-col">
-      <h1 class="text-2xl lg:text-4xl font-bold text-center mb-3">
-        Our Services
-      </h1>
-      <p class="text-lg text-gray-600">
+    <div class="flex flex-col">
+      <p
+        class="text-[56px] lg:text-[72px] leading-none mb-3 font-[swear-display] font-thin"
+      >
+        On-demand talent <br />
+        acquisition for hypergrowth <br />
+        startups.
+      </p>
+      <p class="text-lg text-gray-600 w-[100%] md:w-[50%] mx-auto">
         Our expert team connects you with top-tier Go-to-Market (GTM)
         professionals through flexible and efficient recruiting solutions.
         Whether you need an exclusive retained search, contingency recruiting,

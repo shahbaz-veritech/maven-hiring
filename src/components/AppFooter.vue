@@ -43,7 +43,7 @@
             <ul class="mt-2 space-y-2 leading-8">
               <li>
                 <router-link
-                  to="/about"
+                  to="/about-meena"
                   class="text-gray-300 hover:underline hover:text-white font-semibold underline"
                   >About us</router-link
                 >

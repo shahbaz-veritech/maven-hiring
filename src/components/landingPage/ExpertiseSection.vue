@@ -3,7 +3,7 @@
     <section id="services" class="py-12 max-w-7xl mx-auto px-4">
       <div class="container mx-auto">
         <h1 class="text-2xl lg:text-4xl font-bold text-center mb-3">
-          Our Expertise
+          Best in class candidates, <br />on demand.
         </h1>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
