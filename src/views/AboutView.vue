@@ -2,11 +2,11 @@
   <div class="flex justify-center items-center">
     <div class="flex py-8 md:py-16 max-w-4xl flex-col md:flex-row">
       <div class="md:w-1/2 p-8">
-        <div class="h-[500px] border rounded-lg flex justify-center">
+        <div class="rounded-lg flex justify-center">
           <img
             src="@/assets/profile.jpg"
             alt="profile-pic"
-            class="w-[350px] h-full rounded-xl"
+            class="rounded-lg object-cover"
           />
         </div>
       </div>
