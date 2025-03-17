@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-secondry">
+  <div class="bg-secondry font-[swear-display]">
     <section id="services" class="py-12 max-w-7xl mx-auto px-4">
       <div class="container mx-auto">
-        <h1 class="text-2xl lg:text-4xl font-bold text-center mb-3">
+        <h1 class="text-2xl lg:text-5xl font-regular text-center mb-12">
           Best in class candidates, <br />on demand.
         </h1>
 
@@ -12,7 +12,7 @@
             :key="service.title"
             class="rounded-lg hover:shadow-md p-6 bg-white min-h-[410px] max-h-fit transition-all duration-300 flex flex-col"
           >
-            <h3 class="text-3xl font-semibold mb-4 bg-red h-12">
+            <h3 class="text-3xl font-thin mb-4 h-12">
               {{ service.title }}
             </h3>
             <h4 class="mt-3 mb-8 text-lg bg-green h-12">
