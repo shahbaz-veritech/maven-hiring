@@ -80,8 +80,9 @@
           >
           <router-link
             to="/services"
+            @click="closeMenu"
             :class="[
-              'text-gray-700 hover:text-blue-500 font-semibold',
+              'block px-4 py-2 hover:bg-gray-200',
               isActive('/services'),
             ]"
             >Services</router-link
